@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra Vue JS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div id="barra">
+        <button class="btn btn-primary" @click="contador++">+</button>
+        <button class="btn btn-danger" @click="contador--">-</button>
+        <h3>{{contador}}</h3>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" :style="{'width': contador+ '%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+            :class="color"
+            >{{contador}}%</div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="/VueJS-main/04/barra.js"></script>
+</body>
+</html>
